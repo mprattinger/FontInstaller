@@ -53,7 +53,8 @@ namespace FontInstallerService
 
                 Console.WriteLine("Copy file to folder...");
                 File.Copy(fileInfo.FullName, destFile, true);
-                
+
+                Console.WriteLine("Install font...");
                 result = AddFontRessource(destFile);
                 error = Marshal.GetLastWin32Error();
             }
